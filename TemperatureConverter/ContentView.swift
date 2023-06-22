@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var userInputNumber: Int = 0
     @State private var convertTemperatureFrom: String = "Celcius"
     @State private var convertTemperatureTo: String = "Fahrenheit"
+    @FocusState private var focusedNumber: Bool
     
     private var outputNumber: Double = 0
     
@@ -24,6 +25,8 @@ struct ContentView: View {
             Form {
                 Section {
                     TextField("Enter value", value: $userInputNumber, format: .number)
+                        .keyboardType(.numberPad)
+                        .focused($focusedNumber)
                     
                     Picker("Convert from", selection: $convertTemperatureFrom) {
                         ForEach(units, id: \.self) {
@@ -50,6 +53,14 @@ struct ContentView: View {
 
             }
             .navigationTitle(Text("Temperature Convert"))
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        focusedNumber = false
+                    }
+                }
+            }
         }
     }
 }
