@@ -1,6 +1,6 @@
 //
-//  TemperatureConverterApp.swift
-//  TemperatureConverter
+//  TemperatureConversionsApp.swift
+//  TemperatureConversions
 //
 //  Created by Khumbongmayum Tonny on 22/06/23.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct TemperatureConverterApp: App {
+struct TemperatureConversionsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

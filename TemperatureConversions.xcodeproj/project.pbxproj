@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A64840772A449283008772EC /* TemperatureConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64840762A449283008772EC /* TemperatureConverterApp.swift */; };
+		A64840772A449283008772EC /* TemperatureConversionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64840762A449283008772EC /* TemperatureConversionsApp.swift */; };
 		A64840792A449283008772EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64840782A449283008772EC /* ContentView.swift */; };
 		A648407B2A449284008772EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A648407A2A449284008772EC /* Assets.xcassets */; };
 		A648407E2A449284008772EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A648407D2A449284008772EC /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A64840732A449283008772EC /* TemperatureConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A64840762A449283008772EC /* TemperatureConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterApp.swift; sourceTree = "<group>"; };
+		A64840732A449283008772EC /* TemperatureConversions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureConversions.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A64840762A449283008772EC /* TemperatureConversionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConversionsApp.swift; sourceTree = "<group>"; };
 		A64840782A449283008772EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A648407A2A449284008772EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A648407D2A449284008772EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -35,7 +35,7 @@
 		A648406A2A449282008772EC = {
 			isa = PBXGroup;
 			children = (
-				A64840752A449283008772EC /* TemperatureConverter */,
+				A64840752A449283008772EC /* TemperatureConversions */,
 				A64840742A449283008772EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +43,20 @@
 		A64840742A449283008772EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A64840732A449283008772EC /* TemperatureConverter.app */,
+				A64840732A449283008772EC /* TemperatureConversions.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A64840752A449283008772EC /* TemperatureConverter */ = {
+		A64840752A449283008772EC /* TemperatureConversions */ = {
 			isa = PBXGroup;
 			children = (
-				A64840762A449283008772EC /* TemperatureConverterApp.swift */,
+				A64840762A449283008772EC /* TemperatureConversionsApp.swift */,
 				A64840782A449283008772EC /* ContentView.swift */,
 				A648407A2A449284008772EC /* Assets.xcassets */,
 				A648407C2A449284008772EC /* Preview Content */,
 			);
-			path = TemperatureConverter;
+			path = TemperatureConversions;
 			sourceTree = "<group>";
 		};
 		A648407C2A449284008772EC /* Preview Content */ = {
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A64840722A449283008772EC /* TemperatureConverter */ = {
+		A64840722A449283008772EC /* TemperatureConversions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A64840812A449284008772EC /* Build configuration list for PBXNativeTarget "TemperatureConverter" */;
+			buildConfigurationList = A64840812A449284008772EC /* Build configuration list for PBXNativeTarget "TemperatureConversions" */;
 			buildPhases = (
 				A648406F2A449283008772EC /* Sources */,
 				A64840702A449283008772EC /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = TemperatureConverter;
+			name = TemperatureConversions;
 			productName = TemperatureConverter;
-			productReference = A64840732A449283008772EC /* TemperatureConverter.app */;
+			productReference = A64840732A449283008772EC /* TemperatureConversions.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A648406E2A449282008772EC /* Build configuration list for PBXProject "TemperatureConverter" */;
+			buildConfigurationList = A648406E2A449282008772EC /* Build configuration list for PBXProject "TemperatureConversions" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A64840722A449283008772EC /* TemperatureConverter */,
+				A64840722A449283008772EC /* TemperatureConversions */,
 			);
 		};
 /* End PBXProject section */
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64840792A449283008772EC /* ContentView.swift in Sources */,
-				A64840772A449283008772EC /* TemperatureConverterApp.swift in Sources */,
+				A64840772A449283008772EC /* TemperatureConversionsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +266,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TemperatureConverter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TemperatureConversions/Preview Content\"";
 				DEVELOPMENT_TEAM = 2F4865X8B5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +295,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TemperatureConverter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TemperatureConversions/Preview Content\"";
 				DEVELOPMENT_TEAM = 2F4865X8B5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -320,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A648406E2A449282008772EC /* Build configuration list for PBXProject "TemperatureConverter" */ = {
+		A648406E2A449282008772EC /* Build configuration list for PBXProject "TemperatureConversions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A648407F2A449284008772EC /* Debug */,
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A64840812A449284008772EC /* Build configuration list for PBXNativeTarget "TemperatureConverter" */ = {
+		A64840812A449284008772EC /* Build configuration list for PBXNativeTarget "TemperatureConversions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A64840822A449284008772EC /* Debug */,

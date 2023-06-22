@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  TemperatureConverter
+//  TemperatureConversions
 //
 //  Created by Khumbongmayum Tonny on 22/06/23.
 //
