@@ -9,23 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var userInputNumber: Int = 0
-    @State private var convertTemperatureFrom: String = "Celcius"
-    @State private var convertTemperatureTo: String = "Fahrenheit"
+    @State private var inputNumber: Double? = nil
+    @State private var convertTemperatureFrom: String = "Celsius"
+    @State private var convertTemperatureTo: String = "Celsius"
     @FocusState private var focusedNumber: Bool
     
-    private var outputNumber: Double = 0
+    var outputNumber: Double? {
+        convertTemperature(from: convertTemperatureFrom, to: convertTemperatureTo, value: inputNumber ?? 0)
+    }
     
     let units: [String] = [
-        "Celcius", "Fahrenheit", "Kelvin"
+        "Celsius", "Fahrenheit", "Kelvin"
     ]
     
     var body: some View {
         NavigationStack {
             Form {
                 Section {
-                    TextField("Enter value", value: $userInputNumber, format: .number)
-                        .keyboardType(.numberPad)
+                    TextField("Enter value", value: $inputNumber, format: .number)
+                        .keyboardType(.decimalPad)
                         .focused($focusedNumber)
                     
                     Picker("Convert from", selection: $convertTemperatureFrom) {
@@ -46,7 +48,7 @@ struct ContentView: View {
                     }
                     .pickerStyle(.segmented)
                     
-                    Text(outputNumber, format: .number)
+                    Text(outputNumber ?? 0, format: .number)
                 } header: {
                     Text("Converted to")
                 }
@@ -63,6 +65,49 @@ struct ContentView: View {
             }
         }
     }
+    
+    // Conversion Logic
+    func convertTemperature(from convertTemperatureFrom : String, to convertTemperatureTo: String, value: Double) -> Double? {
+        switch convertTemperatureFrom.lowercased() {
+        case "celsius":
+            switch convertTemperatureTo.lowercased() {
+            case "celsius":
+                return value
+            case "fahrenheit":
+                return (value * 9/5) + 32
+            case "kelvin":
+                return value + 273.15
+            default:
+                return nil
+            }
+        case "fahrenheit":
+            switch convertTemperatureTo.lowercased() {
+            case "celsius":
+                return (value - 32) * 5/9
+            case "fahrenheit":
+                return value
+            case "kelvin":
+                return (value - 32) * 5/9 + 273.15
+            default:
+                return nil
+            }
+        case "kelvin":
+            switch convertTemperatureTo.lowercased() {
+            case "celsius":
+                return value - 273.15
+            case "fahrenheit":
+                return (value - 273.15) * 9/5 + 32
+            case "kelvin":
+                return value
+            default:
+                return nil
+            }
+        default:
+            return nil
+        }
+    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
