@@ -48,7 +48,7 @@ struct ContentView: View {
                     }
                     .pickerStyle(.segmented)
                     
-                    Text(outputNumber ?? 0, format: .number)
+                    Text("\(outputNumber ?? 0, format: .number) \(convertTemperatureTo)")
                 } header: {
                     Text("Converted to")
                 }
