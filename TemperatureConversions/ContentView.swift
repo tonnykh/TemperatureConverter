@@ -30,23 +30,13 @@ struct ContentView: View {
                         .keyboardType(.decimalPad)
                         .focused($focusedNumber)
                     
-                    Picker("Convert from", selection: $convertTemperatureFrom) {
-                        ForEach(units, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    .pickerStyle(.segmented)
+                    TemperatureUnitsPicker(title: "Converted from", selection: $convertTemperatureFrom, units: units)
                 } header: {
                     Text("Convert from")
                 }
                 
                 Section {
-                    Picker("Converted to", selection: $convertTemperatureTo) {
-                        ForEach(units, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    .pickerStyle(.segmented)
+                    TemperatureUnitsPicker(title: "Converted to", selection: $convertTemperatureTo, units: units)
                     
                     Text("\(outputNumber ?? 0, format: .number) \(convertTemperatureTo)")
                 } header: {
@@ -113,5 +103,20 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct TemperatureUnitsPicker: View {
+    var title: String
+    @Binding var selection: String
+    var units: [String]
+    
+    var body: some View {
+        Picker(title, selection: $selection) {
+            ForEach(units, id: \.self) {
+                Text($0)
+            }
+        }
+        .pickerStyle(.segmented)
     }
 }
