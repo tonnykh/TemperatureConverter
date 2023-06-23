@@ -15,7 +15,8 @@ struct ContentView: View {
     @FocusState private var focusedNumber: Bool
     
     var outputNumber: Double? {
-        convertTemperature(from: convertTemperatureFrom, to: convertTemperatureTo, value: inputNumber ?? 0)
+        guard let inputValue = inputNumber else { return nil}
+        return convertTemperature(from: convertTemperatureFrom, to: convertTemperatureTo, value: inputValue)
     }
     
     let units: [String] = [
@@ -106,6 +107,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+// Cutsome view units picker
 struct TemperatureUnitsPicker: View {
     var title: String
     @Binding var selection: String
